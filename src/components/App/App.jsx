@@ -31,6 +31,8 @@ class App extends Component {
 
   render() {
     const { good, neutral, bad } = this.state;
+    const positivePercentage = this.countPositiveFeedbackPercentage(this.countTotalFeedback());
+    
     return (
       <div className={css.app}>
         <Section title="Please Leave your feedback" children>
@@ -41,7 +43,7 @@ class App extends Component {
               neutral={neutral}
               bad={bad}
               total={this.countTotalFeedback(this.state)}
-              positivePercentage={this.countPositiveFeedbackPercentage(this.countTotalFeedback())}
+              positivePercentage={positivePercentage}
             />
           ) : (
             <Notification message="There is no feedback" />

@@ -1,3 +1,37 @@
-.list{
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  width: 90%;
+
   list-style: none;
+  align-self: center;
+  font-size: 25px;
+}
+
+.list > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  text-transform: capitalize;
+}
+
+.list > li:last-child {
+  padding-bottom: 35px;
+  width: 100%;
+
+  border-bottom: 1px solid rgb(181, 181, 181);
+}
+
+h2 {
+  padding-bottom: 20px;
+
+  text-transform: capitalize;
+  font-size: 35px;
+  letter-spacing: 1.2px;
+  text-align: center;
+
+  border-bottom: 1px solid rgb(181, 181, 181);
 }
