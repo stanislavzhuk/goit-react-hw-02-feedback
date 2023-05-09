@@ -5,7 +5,6 @@ const shortid = require('shortid');
 export default function Statistics({ good, neutral, bad, total, positivePercentage }) {
   return (
     <ul className={css.list}>
-      <h2>Statistics: </h2>
       {Object.entries({ good, neutral, bad, total, positivePercentage }).map(([key, value]) => {
         if (key === 'positivePercentage') {
           return (

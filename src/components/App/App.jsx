@@ -35,8 +35,13 @@ class App extends Component {
     
     return (
       <div className={css.app}>
-        <Section title="Please Leave your feedback" children>
-          <FeedbackOptions options={this.state} onLeaveFeedback={this.onLeaveFeedback} />
+        <Section title={'Please leave feedback'}>
+          <FeedbackOptions
+            options={this.state}
+            onLeaveFeedback={this.onLeaveFeedback}
+          />
+        </Section>
+        <Section title={'Statistics'}>
           {Object.values(this.state).some(values => values !== 0) ? (
             <Statistics
               good={good}
